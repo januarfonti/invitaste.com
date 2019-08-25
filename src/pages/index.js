@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Img from "gatsby-image"
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,33 +15,35 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
+
+
+        <div className="container mx-auto">
+          {/*<Bio />*/}
+
+          {/*{posts.map(({ node }) => {*/}
+          {/*  const title = node.frontmatter.title || node.fields.slug*/}
+          {/*  const featuredImgFluid = node.frontmatter.featuredImage.childImageSharp.fluid*/}
+          {/*  return (*/}
+          {/*    <article key={node.fields.slug}>*/}
+          {/*      <header>*/}
+          {/*        <h3>*/}
+          {/*          <Link style={{ boxShadow: `none` }} to={node.fields.slug}>*/}
+          {/*            {title}*/}
+          {/*          </Link>*/}
+          {/*        </h3>*/}
+          {/*        <small>{node.frontmatter.date}</small>*/}
+          {/*      </header>*/}
+          {/*      <section>*/}
+          {/*        <p*/}
+          {/*          dangerouslySetInnerHTML={{*/}
+          {/*            __html: node.frontmatter.description || node.excerpt,*/}
+          {/*          }}*/}
+          {/*        />*/}
+          {/*      </section>*/}
+          {/*    </article>*/}
+          {/*  )*/}
+          {/*})}*/}
+        </div>
       </Layout>
     )
   }
@@ -66,6 +68,13 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             description
           }
         }
