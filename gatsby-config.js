@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Cuti Cuti Club`,
+    author: `Januar Fonti`,
+    description: `Blog dari Januar Fonti`,
+    siteUrl: `https://cuticuti.club/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `januarfonti`,
     },
   },
   plugins: [
@@ -47,6 +47,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

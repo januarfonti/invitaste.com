@@ -7,9 +7,9 @@ class Layout extends React.Component {
   render() {
     const { children } = this.props
     return (
-      <div>
+      <div className="min-h-screen">
         <Navbar/>
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col pt-10">
           {/*<header>Header</header>*/}
           <main>{children}</main>
           {/*<footer className='w-full text-center border-t border-grey p-4 pin-b'>*/}

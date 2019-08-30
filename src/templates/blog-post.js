@@ -19,30 +19,33 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article>
-          <header>
-            <h1
-              style={{
-                marginBottom: 0,
-              }}
-            >
-              {post.frontmatter.title}
-            </h1>
-            <Img fluid={featuredImgFluid} />
-            <p
-              style={{
-                display: `block`,
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-          </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr/>
-          <footer>
-            <Bio />
-          </footer>
-        </article>
+        <section className="detail-blog container mx-auto p-5">
+          <article>
+            <header>
+              <h1
+                style={{
+                  marginBottom: 0,
+                }}
+              >
+                {post.frontmatter.title}
+              </h1>
+              <Img fluid={featuredImgFluid} />
+              <p
+                style={{
+                  display: `block`,
+                }}
+              >
+                {post.frontmatter.date}
+              </p>
+            </header>
+            <section dangerouslySetInnerHTML={{ __html: post.html }} />
+            <hr/>
+            <footer>
+              <Bio />
+            </footer>
+          </article>
+        </section>
+
 
         <nav>
           <ul
