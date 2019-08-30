@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 const Navbar = () => {
   return (
@@ -6,7 +7,7 @@ const Navbar = () => {
       <div className='container mx-auto flex'>
 
         <div className='content-center flex items-center flex-shrink-0 lg:mr-6 mx-auto'>
-          <span className='font-semibold text-xl tracking-tight'>Cuticuti.club</span>
+          <Link to='/' className='font-semibold text-xl tracking-tight'>Cuticuti.club</Link>
         </div>
 
         <div className='hidden lg:block w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto justify-end text-gray-600'>
