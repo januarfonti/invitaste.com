@@ -15,12 +15,12 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title='Cuti Cuti Club' />
-        <section className='container mx-auto pt-10 p-5'>
+        <section className='container mx-auto pt-10 p-5 flex'>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             const featuredImgFluid = node.frontmatter.featuredImage.childImageSharp.fluid
             return (
-              <article className='w-full md:w-1/2 lg:w-1/4 overflow-hidden shadow-lg' key={node.fields.slug}>
+              <article className='w-full md:w-1/2 lg:w-1/4 overflow-hidden shadow-lg m-3' key={node.fields.slug}>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   <div className='post-wrapper'>
                     <Img className='' fluid={featuredImgFluid} />

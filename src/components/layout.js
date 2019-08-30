@@ -11,11 +11,11 @@ class Layout extends React.Component {
         <Navbar/>
         <div className="flex flex-col pt-10">
           {/*<header>Header</header>*/}
-          <main>{children}</main>
+          <main className="pt-10">{children}</main>
           {/*<footer className='w-full text-center border-t border-grey p-4 pin-b'>*/}
           {/*  This is our footer*/}
           {/*</footer>*/}
-          <MobileMenu/>
+          {/* <MobileMenu/> */}
         </div>
       </div>
     )

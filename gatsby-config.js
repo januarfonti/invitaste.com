@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Cuti Cuti Club`,
+    title: `Cuti Cuti Club - The Journal of Januar Fonti`,
     author: `Januar Fonti`,
     description: `Blog dari Januar Fonti`,
     siteUrl: `https://cuticuti.club/`,
@@ -23,6 +23,14 @@ module.exports = {
         name: `assets`,
       },
     },
+    {
+      resolve: "gatsby-remark-embed-youtube",
+      options: {
+        width: 800,
+        height: 400
+      }
+    },
+    `gatsby-remark-responsive-iframe`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
