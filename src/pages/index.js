@@ -15,7 +15,7 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title='Cuti Cuti Club' />
-        <section className='container mx-auto pt-10 p-5 flex'>
+        <section className='container mx-auto p-5 flex flex-wrap'>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             const featuredImgFluid = node.frontmatter.featuredImage.childImageSharp.fluid

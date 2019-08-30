@@ -22,12 +22,12 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <section className='detail-blog container mx-auto p-5 flex'>
+        <section className='detail-blog container mx-auto p-5 flex flex-wrap'>
           <div className='w-full lg:w-4/6'>
-            <div className='bg-white'>
+            <div className='bg-white shadow-lg'>
               <Img fluid={featuredImgFluid} />
-              <div className='p-10'>
-                <h1 className='text-4xl text-center text-gray-700 tracking-tighter'>{post.frontmatter.title}</h1>
+              <div className='p-8 md:p-10'>
+                <h1 className='text-xl md:text-4xl text-center text-gray-700 tracking-tighter'>{post.frontmatter.title}</h1>
                 <h2 className='text-sm text-center text-red-400 uppercase'>{post.frontmatter.date}</h2>
                 <div className='text-center mt-3'>
                   {post.frontmatter.tags.map(tag => (
@@ -38,7 +38,7 @@ class BlogPostTemplate extends React.Component {
                     </span>
                   ))}
                 </div>
-                <div class='blog-content text-gray-700 text-xl mt-10' dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div class='blog-content text-gray-700 text-lg md:text-xl mt-10' dangerouslySetInnerHTML={{ __html: post.html }} />
               </div>
             </div>
             <LazyLoad offsetTop={400}>
@@ -51,7 +51,7 @@ class BlogPostTemplate extends React.Component {
               />
             </LazyLoad>
           </div>
-          <div className='lg:w-2/6 ml-5'>
+          <div className='w-full lg:w-2/6 lg:pl-5'>
             <Sidebar />
           </div>
         </section>
