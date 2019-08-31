@@ -28,6 +28,7 @@ class BlogIndex extends React.Component {
                       <h2 className='text-xs text-red-400 uppercase'>{node.frontmatter.date}</h2>
                       <h1 className='text-md mb-2'>{title}</h1>
                     </div>
+                    {node.timeToRead}
                     <div className='px-6 py-4'>
                       {node.frontmatter.tags.map(tag => (
                         <span key={tag + `tag`}>
@@ -65,6 +66,7 @@ query {
       node {
         id
         excerpt
+        timeToRead
         fields {
           slug
         }
