@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 import Img from 'gatsby-image'
 import { kebabCase } from 'lodash'
 
@@ -14,30 +13,25 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title='Cuti Cuti Club' />
-        <section className='container mx-auto p-5 flex flex-wrap'>
+        <section className='container mx-auto flex flex-wrap'>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             const featuredImgFluid = node.frontmatter.featuredImage.childImageSharp.fluid
             return (
-              <article className='w-full md:w-1/2 lg:w-1/4 overflow-hidden shadow-lg m-3' key={node.fields.slug}>
+              <article className='w-full lg:w-1/4 overflow-hidden shadow-lg m-3' key={node.fields.slug}>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   <div className='post-wrapper'>
                     <Img className='' fluid={featuredImgFluid} />
                     <div className='px-6 py-4'>
-                      <h2 className='text-xs text-red-400 uppercase'>{node.frontmatter.date}</h2>
-                      <h1 className='text-md mb-2'>{title}</h1>
-                    </div>
-                    {node.timeToRead}
-                    <div className='px-6 py-4'>
+                      <h2 className='text-xs text-red-400 uppercase mr-2'>{node.frontmatter.date}</h2>
                       {node.frontmatter.tags.map(tag => (
-                        <span key={tag + `tag`}>
+                        <span className="" key={tag + `tag`}>
                           <Link to={`/tags/${kebabCase(tag)}/`}>
-                            <span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2'>#{tag}</span>
+                            <h2 className='text-xs text-gray-700 mr-2 mb-2'>#{tag}</h2>
                           </Link>
                         </span>
                       ))}
-
+                      <h1 className='text-md mb-2'>{title}</h1>
                     </div>
                   </div>
                 </Link>

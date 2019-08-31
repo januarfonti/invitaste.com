@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import Navbar from "./navbar"
-import MobileMenu from "./mobile-menu"
+// import MobileMenu from "./mobile-menu"
 
 class Layout extends React.Component {
   render() {

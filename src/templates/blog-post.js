@@ -22,7 +22,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <section className='detail-blog container mx-auto p-5 flex flex-wrap'>
+        <section className='detail-blog container mx-auto flex flex-wrap'>
           <div className='w-full lg:w-4/6'>
             <div className='bg-white shadow-lg'>
               <Img fluid={featuredImgFluid} />
@@ -54,6 +54,7 @@ class BlogPostTemplate extends React.Component {
           <div className='w-full lg:w-2/6 lg:pl-5'>
             <Sidebar />
           </div>
+          
         </section>
 
         <nav>

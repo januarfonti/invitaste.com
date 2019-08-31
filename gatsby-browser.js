@@ -1,3 +1,4 @@
 // custom typefaces
-
-import "./src/styles/site.css"
+import 'typeface-miriam-libre'
+import 'typeface-source-sans-pro'
+import './src/styles/site.css'
