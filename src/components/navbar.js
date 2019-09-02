@@ -1,28 +1,24 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import logo from './images/logo-cuticuticlub.png'
 
 const Navbar = () => {
   return (
-    <nav className='flex items-center justify-between flex-wrap px-10 py-3 border-t-4 border-red-400 bg-gray-100 shadow-md fixed w-full z-50'>
-      <div className='container mx-auto flex'>
-
-        <div className='content-center flex items-center flex-shrink-0 lg:mr-6 mx-auto'>
-          <Link to='/' className='font-semibold text-xl tracking-tight'>Cuticuti.club</Link>
+    <nav className='flex items-center justify-between flex-wrap pt-24 w-full z-50'>
+      <div className='container mx-auto flex flex-col'>
+        <div className='mx-auto'>
+          <Link to='/' className='text-xl tracking-tight'>
+            <img className='h-32 w-auto hover:opacity-75' src={logo} alt='cuticuticlub' />
+          </Link>
+          <h1 className='mt-5 uppercase text-center text-gray-800 text-xs'>The Journal of Januar Fonti</h1>
         </div>
-
-        <div className='hidden lg:block w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto justify-end text-gray-600'>
-          <a href='#responsive-header' className='block mt-4 lg:inline-block lg:mt-0  hover:text-white mr-10'>
-              Catatan
-          </a>
-          <a href='#responsive-header' className='block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-10'>
-              Foto
-          </a>
-          <a href='#responsive-header' className='block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-10'>
-              Video
-          </a>
-          <a href='#responsive-header' className='block mt-4 lg:inline-block lg:mt-0  hover:text-white'>
-            Kontak
-          </a>
+        <div className='mx-auto'>
+          <ul className='flex mt-16 uppercase mx-auto'>
+            <li className="flex-1 mr-20 text-center"><Link className='text-center' to='/tags/catatan'>#Catatan</Link></li>
+            <li className="flex-1 mr-20 text-center"><Link className='text-center' to='/tags/foto'>#Foto</Link></li>
+            <li className="flex-1 mr-20 text-center"><Link className='text-center' to='/tags/video'>#Video</Link></li>
+            <li className="flex-1 text-center"><Link className='text-center' to='/kontak'>Kontak</Link></li>
+          </ul>
         </div>
       </div>
     </nav>
