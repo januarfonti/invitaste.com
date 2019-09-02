@@ -70,7 +70,7 @@ module.exports = {
         short_name: `Cuti Cuti Club`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#234e52`,
         display: `standalone`,
         icon: `content/assets/gatsby-icon.png`,
       },
