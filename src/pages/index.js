@@ -21,7 +21,7 @@ class BlogIndex extends React.Component {
               const title = node.frontmatter.title || node.fields.slug
               const featuredImgFluid = node.frontmatter.featuredImage.childImageSharp.fluid
               return (
-                <div className='my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3'>
+                <div className='my-2 md:px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3'>
                   <article className='overflow-hidden bg-white' key={node.fields.slug}>
                     <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                       <div className='post-wrapper'>
