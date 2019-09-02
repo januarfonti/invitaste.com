@@ -39,6 +39,7 @@
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-lazy-load": "^3.0.13",
+    "react-scroll": "^1.7.14",
     "tailwindcss": "^1.1.2",
     "typeface-miriam-libre": "^0.0.71",
     "typeface-source-sans-pro": "^0.0.75"
