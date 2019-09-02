@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className='container mx-auto flex flex-col'>
         <div className='mx-auto'>
           <Link to='/' className='text-xl tracking-tight'>
-            <img className='h-32 w-auto hover:opacity-75' src={logo} alt='cuticuticlub' />
+            <img className='h-24 md:h-32 w-auto hover:opacity-75' src={logo} alt='cuticuticlub' />
           </Link>
           <h1 className='mt-5 uppercase text-center text-gray-800 text-xs'>The Journal of Januar Fonti</h1>
         </div>

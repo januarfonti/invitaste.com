@@ -1,8 +1,7 @@
 import React from 'react'
 import Navbar from './navbar'
 import MobileMenu from './mobile-menu'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
+import ScrollToTop from './scroll-to-top'
 
 class Layout extends React.Component {
   render () {
@@ -14,9 +13,7 @@ class Layout extends React.Component {
           <main className='pt-10'>{children}</main>
           <MobileMenu />
         </div>
-        <div className='scroll-to-top rounded bg-red-400 fixed px-4 py-2'>
-          <FontAwesomeIcon className="text-white" icon={faAngleDoubleUp} />
-        </div>
+        <ScrollToTop />
       </div>
     )
   }
