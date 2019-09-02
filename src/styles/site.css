@@ -21,3 +21,12 @@ h1,h2,h3,h4,h5,h6 {
 .blog-content ul {
     margin-bottom: 1.5em;
 }
+
+.scroll-to-top {
+  bottom: 65px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
