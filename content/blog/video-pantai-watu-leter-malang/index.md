@@ -1,7 +1,7 @@
 ---
 title: "Video : Pantai Watu Leter Malang (DJI Mavic Air & Gopro Hero 7 Black)"
 date: "2019-08-14T22:12:03.284Z"
-description: "Sumber Sirah, Gondanglegi Malang"
+description: "Video : Pantai Watu Leter Malang (DJI Mavic Air & Gopro Hero 7 Black)"
 featuredImage: ./pantai-watu-leter-malang-dji-mavic-air-gopro-hero-7-black.jpg
 tags: ["video"]
 ---

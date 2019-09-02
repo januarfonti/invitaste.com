@@ -4,7 +4,7 @@ import logo from './images/logo-cuticuticlub.png'
 
 const Navbar = () => {
   return (
-    <nav className='flex items-center justify-between flex-wrap pt-24 w-full z-50'>
+    <nav className='flex items-center justify-between flex-wrap pt-24 w-full z-50 border-t-8 border-red-400'>
       <div className='container mx-auto flex flex-col'>
         <div className='mx-auto'>
           <Link to='/' className='text-xl tracking-tight'>

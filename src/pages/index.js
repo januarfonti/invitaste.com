@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import Img from 'gatsby-image'
 import { kebabCase } from 'lodash'
 
@@ -13,6 +14,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <SEO title='Beranda' />
         <section className='container mx-auto'>
           <div class="flex flex-wrap -mx-1 lg:-mx-4">
             {posts.map(({ node }) => {
