@@ -30,6 +30,14 @@ module.exports = {
         height: 400
       }
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://cuticuti.club',
+        sitemap: 'https://cuticuti.club/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     `gatsby-remark-responsive-iframe`,
     {
       resolve: `gatsby-transformer-remark`,
