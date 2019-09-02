@@ -9,25 +9,25 @@ const MobileMenu = () => {
       <ul className='flex'>
         <li className='flex-1 mr-2 border-r-2 border-teal-800'>
           <Link className='text-center block px-4 ' to='/tags/catatan'>
-            <FontAwesomeIcon icon={faCampground} />
+            <FontAwesomeIcon className="h-4 w-auto" icon={faCampground} />
             <span className='text-xs block'>Catatan</span>
           </Link>
         </li>
         <li className='flex-1 mr-2 border-r-2 border-teal-800'>
           <Link className='text-center block px-4 ' to='/tags/video'>
-            <FontAwesomeIcon icon={faTree} />
+            <FontAwesomeIcon className="h-4 w-auto" icon={faTree} />
             <span className='text-xs block'>Video</span>
           </Link>
         </li>
         <li className='flex-1 mr-2 border-r-2 border-teal-800'>
           <Link className='text-center block px-4 ' to='/tags/foto'>
-            <FontAwesomeIcon icon={faMountain} />
+            <FontAwesomeIcon className="h-4 w-auto" icon={faMountain} />
             <span className='text-xs block'>Foto</span>
           </Link>
         </li>
         <li className='text-center flex-1'>
           <Link className='text-center block px-4 ' to='/kontak'>
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon className="h-4 w-auto" icon={faEnvelope} />
             <span className='text-xs block'>Kontak</span>
           </Link>
         </li>
